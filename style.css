@@ -1,0 +1,160 @@
+:root {
+    --font-color: #eee;
+    --font-color-dark: #aaa;
+    --border-color: #222;
+    --background-dark: rgba(0, 0, 0, 0.9);
+    --bacground-light: rgba(0, 0, 0, 0.6);
+    --background-light-hover: rgba(99, 99, 99, 0.4);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    background-image: url(./img/donerbg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+div#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    color: var(--font-color);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--background-dark);
+    padding: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.restaurant-name {
+    color: var(--font-color);
+    margin-bottom: 1rem;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--font-color);
+    border-bottom: 2px solid transparent;
+    transition: transform 0.3s;
+}
+
+.active {
+    border-bottom: 2px solid var(--font-color);
+}
+
+.nav-button:hover {
+    transform: translateY(-15%);
+}
+
+main {
+    background-color: var(--bacground-light);
+    max-width: 700px;
+    padding: 2rem;
+    margin: 2rem 0;
+
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+
+}
+
+.home img {
+    width: 35%;
+    opacity: 80%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    gap: 1rem;
+}
+
+.contact img {
+    width: 75%;
+}
+
+.menu {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    height: 300px;
+    cursor: pointer;
+    background-color: var(--bacground-light);
+    
+}
+
+.menu-item img {
+    height: 75%;
+}
+
+.menu-item:hover {
+    background-color: var(--background-light-hover);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--background-dark);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #000;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #222;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #444;
+}
