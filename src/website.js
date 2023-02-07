@@ -98,7 +98,10 @@ function initializeWebsite() {
     content.appendChild(createMain());
     content.appendChild(createFooter());
 
+    
     loadHome();
+    setActiveBtn(document.querySelector('.nav-button'));
+    
 }
 
 export default initializeWebsite();
